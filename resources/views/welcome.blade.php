@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Tienda videojuegos
                 </div>
 
                 <div class="links">
