@@ -65,6 +65,9 @@
                             </div>
                         </div>
                     </form>
+                    <p class="mt-3 mb-2 text-center lead">o</p>
+                    <a href="{{ url('login/facebook') }}" class="btn btn-block btn-primary">iniciar sesión con Facebook</a>
+                    <a href="{{ url('login/google') }}" class="btn btn-block btn-danger">iniciar sesión con Google</a>
                 </div>
             </div>
         </div>

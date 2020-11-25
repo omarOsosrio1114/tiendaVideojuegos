@@ -105,7 +105,8 @@ return [
     | localized telephone numbers, street address information and more.
     |
     */
-
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    
     'faker_locale' => 'en_US',
 
     /*
