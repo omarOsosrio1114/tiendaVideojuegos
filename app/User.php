@@ -38,6 +38,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function image()
+    {
+        $social_profile = $this->socialProfiles->first();
+        if($social_profile){
+            return  $social_profile->social_avatar;
+        }
+    }
     public function socialProfiles(){
         return $this->hasMany(SocialProfile::class);
     }

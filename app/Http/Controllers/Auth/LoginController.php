@@ -46,7 +46,15 @@ class LoginController extends Controller
      */
     public function redirectToProvider($driver)
     {
-        return Socialite::driver($driver)->redirect();
+        $drivers = ['facebook','google'];
+        if(in_array($driver,$drivers))
+        {
+            return Socialite::driver($driver)->redirect();
+        }
+        else{
+            return redirect()->route('login');
+        }
+        
     }
 
     /**
@@ -83,8 +91,8 @@ class LoginController extends Controller
 
         }
         
-               
+        auth()->login($user);
 
-        // $user->token;
+        return redirect()->route('home');
     }
 }
