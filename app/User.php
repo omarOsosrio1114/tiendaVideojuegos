@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\OwnGame;
 use App\SocialProfile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -48,4 +49,8 @@ class User extends Authenticatable
     public function socialProfiles(){
         return $this->hasMany(SocialProfile::class);
     }
+    public function games(){
+        return $this->hasMany(OwnGame::class);
+    }
+
 }
